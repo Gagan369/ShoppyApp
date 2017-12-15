@@ -48,8 +48,6 @@ public class PaymentPreview extends Activity {
     Button pay = null;
     private ArrayList<String> mUsername = new ArrayList<>();
     ListView mUserList;
-    private ArrayList<String> mUsername1 = new ArrayList<>();
-    ListView mUserList1;
 
     public static final String TAG = "PayUMoneySDK Sample";
 
@@ -107,8 +105,6 @@ public class PaymentPreview extends Activity {
             }
 
         });
-
-
     }
 
     private boolean isDouble(String str) {
@@ -335,7 +331,7 @@ public class PaymentPreview extends Activity {
                         .withSenderName("Shoppy App")
                         .withMailTo("dudestylish16@gmail.com")
                         .withSubject("New Order")
-                        .withBody(String.valueOf(mUsername)+"items are:"+String.valueOf(mUsername1))
+                        .withBody(String.valueOf(mUsername))
                         //.withAttachments(fileName)
                         .withUseDefaultSession(false)
                         .withProcessVisibility(true)
